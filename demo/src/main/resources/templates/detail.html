@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>상세</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="content-box">
+
+    <div class="page-header">
+        <div>
+            <h2 class="page-title">상세</h2>
+            <p class="page-subtitle">작성한 일기 내용을 확인할 수 있어요.</p>
+        </div>
+
+        <div style="display:flex; gap:8px;">
+            <a class="btn btn-secondary" href="/board/">📋 목록</a>
+            <a class="btn btn-primary" th:href="@{/board/update/{id}(id=${board.id})}">✏ 수정</a>
+
+            <!-- ✅ 삭제는 POST -->
+            <form th:action="@{/board/delete/{id}(id=${board.id})}" method="post" style="margin:0;">
+                <button type="submit" class="btn btn-danger"
+                        onclick="return confirm('정말 삭제할까요?');">🗑 삭제</button>
+            </form>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <th>id</th>
+            <td th:text="${board.id}"></td>
+        </tr>
+        <tr>
+            <th>title</th>
+            <td th:text="${board.boardTitle}"></td>
+        </tr>
+        <tr>
+            <th>writer</th>
+            <td th:text="${board.boardWriter}"></td>
+        </tr>
+        <tr>
+            <th>date</th>
+            <td th:text="${board.boardCreatedAt}"></td>
+        </tr>
+        <tr>
+            <th>hits</th>
+            <td th:text="${board.boardHits}"></td>
+        </tr>
+        <tr>
+            <th>contents</th>
+            <td th:text="${board.boardContents}"></td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>
