@@ -1,11 +1,12 @@
-package com.example.demo.entity;
+package com.example.kiroku.entity;
 
-import com.example.demo.dto.BoardDTO;
+import com.example.kiroku.dto.BoardDTO;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
+//BoardEntity는 게시글 정보를 DB 테이블과 매핑하는 클래스이며, DTO의 데이터를 Entity로 변환하는 메소드를 가지고 있고,
+// 작성자(UserEntity)와는 다대일(ManyToOne) 관계로 설정
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

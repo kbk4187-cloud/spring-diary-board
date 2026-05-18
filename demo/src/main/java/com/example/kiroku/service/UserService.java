@@ -1,12 +1,14 @@
-package com.example.demo.service;
+package com.example.kiroku.service;
 
-import com.example.demo.entity.UserEntity;
-import com.example.demo.repository.UserRepository;
+import com.example.kiroku.entity.UserEntity;
+import com.example.kiroku.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
+//UserService는 회원가입과 로그인 등 사용자 관련 비즈니스 로직을 처리하는 클래스이며,
+// Repository를 통해 사용자 정보를 조회하거나 저장하는 역할
 public class UserService {
 
     private final UserRepository userRepository;

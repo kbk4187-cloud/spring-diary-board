@@ -1,13 +1,14 @@
-package com.example.demo.controller;
+package com.example.kiroku.controller;
 
-import com.example.demo.entity.UserEntity;
-import com.example.demo.service.UserService;
+import com.example.kiroku.entity.UserEntity;
+import com.example.kiroku.service.UserService;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
+//AutoController는 로그인과 회원가입 요청을 받아 Service에 로직 처리를 맡기고,
+// 그 결과를 화면에 연결하는 역할
 @Controller
 @RequiredArgsConstructor
 public class AuthController {

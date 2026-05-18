@@ -1,9 +1,10 @@
-package com.example.demo.entity;
+package com.example.kiroku.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
+//UserEntity는 사용자 정보를 DB 테이블과 매핑하는 JPA 엔티티 클래스이며,
+// 기본키(PK)인 id와 사용자 아이디, 비밀번호 등의 컬럼
 @Entity
 @Getter
 @Setter

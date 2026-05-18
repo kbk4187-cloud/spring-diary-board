@@ -1,6 +1,6 @@
-package com.example.demo.dto;
+package com.example.kiroku.dto;
 
-import com.example.demo.entity.BoardEntity;
+import com.example.kiroku.entity.BoardEntity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -11,6 +11,8 @@ import java.time.format.DateTimeFormatter;
 @Getter
 @Setter
 @ToString
+//BoardDTO는 게시글 데이터를 View로 전달하기 위한 객체이며,
+// BoardEntity의 데이터를 DTO 형태로 변환하는 정적 메소드를 통해 Entity와 View 사이의 데이터 전달 역할
 public class BoardDTO {
     private Long id;
     private String boardWriter;
